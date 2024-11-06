@@ -9,20 +9,33 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * This migration creates the categories table and inserts the
+     * initial categories.
      */
     public function up(): void
     {
+        // Create the categories table
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
         });
 
-        $categories = ['politica', 'economia', 'food&drink', 'sport', 'intrattenimento', 'tech'];
+        // Insert the initial categories
+        $categories = [
+            'politica',
+            'economia',
+            'food&drink',
+            'sport',
+            'intrattenimento',
+            'tech',
+        ];
 
-        foreach($categories as $category) {
-            category::create([
-                'name'=>$category
+        foreach ($categories as $category) {
+            // Create a new category instance and save it to the database
+            Category::create([
+                'name' => $category,
             ]);
         }
     }

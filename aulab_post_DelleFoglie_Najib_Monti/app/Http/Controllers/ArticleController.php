@@ -4,9 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Auth;
 
-class ArticleController extends Controller
+class ArticleController extends Controller implements HasMiddleware
 {
+
+
+    public static function middleware(){
+        return [
+            new Middleware('auth', except:['index','show']),
+        ];
+    }
     /**
      * Display a listing of the resource.
      */
@@ -28,7 +38,35 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|unique:articles|min:5',
+            'subtitle' => 'required|min:5',
+            'body' => 'required|min:15',
+            'image' => 'required|image|max:2048',
+            'category' => 'required'
+        ]);
+
+        $article = Article::create([
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' => $request->body,
+            'image' => $request->image,
+            'category_id' => $request->category,
+            'user_id' => Auth::user()->id
+        ]);
+        
+        // $article = Article::create($request->validated());
+        // $article->categories()->attach($request->categories);
+
+        // if($request->hasFile('image')){
+        //     $file = $request->file('image');
+        //     $name = 'image'.$article->id.'.'.$file->getClientOriginalExtension();
+        //     $file->storeAs('images',$name,'public');
+        //     $article->image = "images/".$name;
+        //     $article->save();
+        // }
+
+        return redirect()->back()->with('success','Articolo creato correttamente');
     }
 
     /**

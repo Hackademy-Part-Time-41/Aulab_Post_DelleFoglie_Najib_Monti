@@ -11,6 +11,6 @@ class PubblicController extends Controller
     }
 
     public function registerForm() {
-        return view('register');
+        return view('auth.register');
     }
 }
