@@ -11,6 +11,8 @@
             <div class="col-12 col-md-8">
                 <form action="{{route('register') }}" method="POST"  class="card p-5 shadow">
                     @csrf
+                <form action="{{route('register') }}" method="POST" class="card p-5 shadow">
+                @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome Utente</label>
                         <input type="text" class="form-controll" id="name" name="name" value="{{ old('name') }}">
