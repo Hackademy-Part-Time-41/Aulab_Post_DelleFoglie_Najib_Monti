@@ -1,17 +1,23 @@
 <x-layout>
 
-    <div class="container">
-        <x-success></x-success>
-        <div class="row">
-            <h1 class='text-center'>Scrivi il tuo articolo</h1>
-            <div class="col-8 mx-auto mt-3">
+    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1 class='display-1'>Scrivi il tuo articolo</h1>
+            </div>
+        </div>
+    </div>
 
-                <form action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            
+            <div class="col-12 col-md-8">
+
+                <form action="{{route('article.store') }}" method="POST" class="card p-5 shadow" enctype="multipart/form-data">
                     @csrf
                     <div class="mt-3 text-center">
-
                         <div class="my-3">
-                            <label for="title">Titolo dell'Articolo</label>
+                            <label for="title" class="form-label">Titolo dell'Articolo</label>
                             <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="title" value="{{old('title')}}">
                             @error('title')
                                 <div class="alert alert-danger">{{$message}}</div>
@@ -19,7 +25,7 @@
                         </div>
 
                         <div class="my-3">
-                            <label for="subtitle">Sottotitolo dell'Articolo</label>
+                            <label for="subtitle" class="form-label">Sottotitolo dell'Articolo</label>
                             <input class="form-control @error('subtitle') is-invalid @enderror" type="text" name="subtitle" id="subtitle" value="{{old('subtitle')}}">
                             @error('subtitle')
                                 <div class="alert alert-danger">{{$message}}</div>
@@ -27,19 +33,25 @@
                         </div>
 
                         <div class="mt-3">
-                            <label for="image">Inserisci un immagine</label>
+                            <label for="image" class="form-label">Inserisci un immagine</label>
                             <input class="form-control @error('image') is-invalid @enderror" type="file" name="image" id="image" >
                             @error('image')
                                 <div class="alert alert-danger">{{$message}}</div>
                             @enderror
                         </div>
 
-                        @foreach ($categories as $category)
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="categories[]" id="inlineRadio1" value="{{$category->id}}">
-                                <label class="form-check-label" for="inlineRadio1">{{$category->name}}</label>
-                            </div>
-                        @endforeach
+                        <div class="my-3">
+                            <label for="category" class="form-label">Categoria</label>
+                            <select class="form-select @error('category') is-invalid @enderror" name="category" id="category">
+                                <option selected disabled>Seleziona una categoria</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                            </select>
+                            @error('category')
+                                <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
+                        </div>
 
                         <div class="mt-3">
                             <label for="body">Corpo dell'articolo</label>
@@ -53,6 +65,7 @@
 
                     <div class="d-flex justify-content-center mt-3">
                         <button class='btn btn-dark' type="submit">Pubblica articolo</button>
+                        <a href="{{route('homepage')}}" class="text-secondary mt-2">Torna alla homepage</a>
                     </div>
 
                 </form>

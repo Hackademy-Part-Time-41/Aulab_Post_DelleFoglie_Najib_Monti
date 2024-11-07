@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Auth;
+
 
 class ArticleController extends Controller implements HasMiddleware
 {
@@ -22,7 +24,8 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function index()
     {
-        //
+        $articles = Article::orderBy('created_at', 'desc')->get();
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -38,35 +41,31 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'title' => 'required|unique:articles|min:5',
             'subtitle' => 'required|min:5',
             'body' => 'required|min:15',
-            'image' => 'required|image|max:2048',
-            'category' => 'required'
+            'image' => 'required|image',
+            'category' => 'required',
         ]);
 
         $article = Article::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'body' => $request->body,
-            'image' => $request->image,
+            'image' => $request->file('image')->store('storage/app/public/images', 'public'),
             'category_id' => $request->category,
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
         ]);
-        
-        // $article = Article::create($request->validated());
-        // $article->categories()->attach($request->categories);
-
-        // if($request->hasFile('image')){
-        //     $file = $request->file('image');
-        //     $name = 'image'.$article->id.'.'.$file->getClientOriginalExtension();
-        //     $file->storeAs('images',$name,'public');
-        //     $article->image = "images/".$name;
-        //     $article->save();
-        // }
 
         return redirect(route('homepage'))->with('message','Articolo creato correttamente');
+    }
+
+    public function byCategory($category){
+
+        $articles = $category->articles()->orderBy('created_at', 'desc')->get();
+        return view('article.byCategory', compact('articles', 'category'));
     }
 
     /**
@@ -74,7 +73,7 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**
@@ -85,9 +84,6 @@ class ArticleController extends Controller implements HasMiddleware
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Article $article)
     {
         //

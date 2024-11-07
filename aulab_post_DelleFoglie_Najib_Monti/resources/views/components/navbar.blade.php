@@ -55,6 +55,9 @@
             <li>
               <a href="{{ route('article.create') }}" class="nav-link">Inserisci un articolo</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  href="{{ route('article.index') }}">Tutti gli articoli</a>
+            </li>
             <form action="{{ route('logout') }}" method="POST" id="form-logout" class="d-none">
               @csrf
             </form>
