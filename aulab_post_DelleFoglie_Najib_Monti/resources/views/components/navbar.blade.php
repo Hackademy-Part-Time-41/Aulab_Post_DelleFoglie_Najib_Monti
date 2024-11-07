@@ -64,7 +64,7 @@
               Benvenuto Ospite 
           </a>
           <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('auth.register') }}">Registrati</a></li>
+              <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
               <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
           </ul>
       </li>

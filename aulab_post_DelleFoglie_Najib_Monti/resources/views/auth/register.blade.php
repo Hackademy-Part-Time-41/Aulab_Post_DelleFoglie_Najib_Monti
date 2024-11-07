@@ -9,7 +9,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form action="{{route('auth.register') }}" method="POST" class="card p-5 shadow">
+                <form action="{{route('register') }}" method="POST" class="card p-5 shadow">
                 @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome Utente</label>
