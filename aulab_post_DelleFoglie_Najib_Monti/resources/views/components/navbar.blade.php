@@ -52,6 +52,9 @@
             <li>
               <a class="dropdown-item" href="{{ route('article.create') }}" oneclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
             </li>
+            <li>
+              <a href="{{ route('article.create') }}" class="nav-link">Inserisci un articolo</a>
+            </li>
             <form action="{{ route('logout') }}" method="POST" id="form-logout" class="d-none">
               @csrf
             </form>
@@ -61,11 +64,11 @@
   @guest
       <li class="nav-item dropdown ">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Benvenuto Ospite 
+            Benvenuto Ospite 
           </a>
           <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('auth.register') }}">Registrati</a></li>
-              <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+              <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+              <li><a class="dropdown-item" href="{{route('login') }}">Accedi</a></li>
           </ul>
       </li>
   @endguest

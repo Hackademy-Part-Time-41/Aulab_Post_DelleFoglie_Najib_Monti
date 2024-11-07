@@ -9,8 +9,4 @@ class PubblicController extends Controller
     public function homepage() {
         return view('welcome');
     }
-
-    public function registerForm() {
-        return view('auth.register');
-    }
 }

@@ -6,7 +6,7 @@
             <h1 class='text-center'>Scrivi il tuo articolo</h1>
             <div class="col-8 mx-auto mt-3">
 
-                <form action="{{route('article.store')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mt-3 text-center">
 
@@ -20,7 +20,7 @@
 
                         <div class="my-3">
                             <label for="subtitle">Sottotitolo dell'Articolo</label>
-                            <input class="form-control @error('subtitle') is-invalid @enderror" type="text" name="subtitle" id="subtitle" value="{{old('title')}}">
+                            <input class="form-control @error('subtitle') is-invalid @enderror" type="text" name="subtitle" id="subtitle" value="{{old('subtitle')}}">
                             @error('subtitle')
                                 <div class="alert alert-danger">{{$message}}</div>
                             @enderror
@@ -49,16 +49,6 @@
                             @enderror
                         </div>
 
-                        {{-- <div class="mt-3">
-                            <label for="author_id">Nome dell'autore </label>
-                            @error('author_id')
-                                <div class="alert alert-danger">{{$message}}</div>
-                            @enderror
-                            <select class="form-control" name="author_id" id="author_id">
-                                <option value="" selected>Scegli l'autore</option>
-                            </select>
-                        </div> --}}
-        
                     </div>
 
                     <div class="d-flex justify-content-center mt-3">

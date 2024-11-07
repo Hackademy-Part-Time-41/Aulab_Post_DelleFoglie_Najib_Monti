@@ -66,7 +66,7 @@ class ArticleController extends Controller implements HasMiddleware
         //     $article->save();
         // }
 
-        return redirect()->back()->with('success','Articolo creato correttamente');
+        return redirect(route('homepage'))->with('message','Articolo creato correttamente');
     }
 
     /**
