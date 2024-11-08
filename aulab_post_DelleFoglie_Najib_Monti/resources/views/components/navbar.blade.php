@@ -44,25 +44,19 @@
     </div>
   </div>
   @auth
-      <li class="nav-item-dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ciao {{Auth::user()->name }}
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="{{ route('article.create') }}" oneclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
-            </li>
-            <li>
-              <a href="{{ route('article.create') }}" class="nav-link">Inserisci un articolo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page"  href="{{ route('article.index') }}">Tutti gli articoli</a>
-            </li>
-            <form action="{{ route('logout') }}" method="POST" id="form-logout" class="d-none">
-              @csrf
-            </form>
-          </ul>
-      </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Benvenuto {{ Auth::user()->name }}
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout-form').submit()">Logout</a>
+        </li>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+        </form>
+      </ul>
+    </li>
   @endauth
   @guest
       <li class="nav-item dropdown ">
