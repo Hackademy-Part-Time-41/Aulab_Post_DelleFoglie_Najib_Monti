@@ -21,6 +21,9 @@
           </a>
           <ul class="dropdown-menu">
             <li>
+              <a class="dropdown-item" href="{{ route('article.create') }}">Crea Articolo</a>
+            </li>
+            <li>
               <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout-form').submit()">Logout</a>
             </li>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
