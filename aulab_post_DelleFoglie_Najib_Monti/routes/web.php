@@ -16,3 +16,4 @@ Route::get('/article/category/{category}', [ArticleController::class, 'byCategor
 Route::post('/article/store', [ArticleController::class,'store'])->name('article.store'); 
 
 Route::get('article/user/{user}', [ArticleController::class, 'byUser'])->name('article.byUser');
+Route::get('/careers',[PubblicController::class, 'careers'])->name('careers');
