@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\PubblicController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PubblicController;
 
 
 Route::get('/', [PubblicController::class, 'homepage'])->name('homepage');
@@ -17,3 +18,9 @@ Route::post('/article/store', [ArticleController::class,'store'])->name('article
 
 Route::get('article/user/{user}', [ArticleController::class, 'byUser'])->name('article.byUser');
 Route::get('/careers',[PubblicController::class, 'careers'])->name('careers');
+
+Route::post('/careers/submit', [PubblicController::class, 'careersSubmit'])->name('careers.submit');
+
+Route::middleware('admin')->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+});
