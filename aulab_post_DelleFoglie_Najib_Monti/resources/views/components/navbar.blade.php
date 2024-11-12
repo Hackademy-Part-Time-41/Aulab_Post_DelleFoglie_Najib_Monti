@@ -24,6 +24,9 @@
               <a class="dropdown-item" href="{{ route('article.create') }}">Crea Articolo</a>
             </li>
             <li>
+              <a href="{{ route('careers') }}" class="nav-link active" aria-current="page">Lavora con noi</a>
+            </li>
+            <li>
               <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout-form').submit()">Logout</a>
             </li>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -39,6 +42,7 @@
               Benvenuto Ospite 
             </a>
             <ul class="dropdown-menu">
+                <li><a href="{{ route('careers') }}" class="nav-link active" aria-current="page">Lavora con noi</a></li>
                 <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                 <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
             </ul>

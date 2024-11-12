@@ -1,4 +1,4 @@
-<div>
+<div class="d-flex flex-wrap justify-content-center">
     <div class="card" style="width: 18rem;">
         <img src="{{$image ?? "https://picsum.photos/200/600"}}" class="card-img-top" alt="...">
         <div class="card-body">
