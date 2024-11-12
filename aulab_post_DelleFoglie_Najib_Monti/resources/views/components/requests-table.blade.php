@@ -1,29 +1,45 @@
-<table class="table">
-    <thead>
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
       <tr>
         <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Azioni</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
+      @foreach ($roleRequests as $user )
+        <tr>
+          <th scope="row">{{$user->id}}</th>
+          <td>{{$user->name}}</td>
+          <td>{{$user->email}}</td>
+          <td>
+          @switch($role)
+            @case('amministratore')
+            <form action="{{route('admin.setAdmin', $user)}}" method="POST">
+              @csrf 
+              @method('PATCH')
+              <button type="submit" class="btn btn-secondary">Attiva {{$role}}</button>
+            </form>
+            @break
+            @case('revisore')
+            <form action="{{route('admin.setRevisor', $user)}}" method="POST">
+              @csrf 
+              @method('PATCH')
+              <button type="submit" class="btn btn-secondary">Attiva {{$role}}</button>
+            </form>
+            @break
+            @case('redattore')
+            <form action="{{route('admin.setWriter', $user)}}" method="POST">
+              @csrf 
+              @method('PATCH')
+              <button type="submit" class="btn btn-secondary">Attiva {{$role}}</button>
+            </form>
+            @break
+            @endswitch
+            <button class="btn btn-secondary">Attiva {{$role}}</button>
+          </td>
+        </tr>
+      @endforeach
     </tbody>
   </table>
