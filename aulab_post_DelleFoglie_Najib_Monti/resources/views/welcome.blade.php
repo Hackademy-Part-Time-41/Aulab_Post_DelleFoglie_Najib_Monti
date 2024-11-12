@@ -11,6 +11,12 @@
                 </div>
             @endif
 
+            @if (session('alert'))
+                <div class="alert alert-danger">
+                  {{session('alert')}}
+                </div>
+            @endif
+
             @foreach ($articles as $article )
               <div class="col-12 col-md-3">
                 <div class="card" style="width: 18rem;">

@@ -20,6 +20,15 @@
             Benvenuto {{ Auth::user()->name }}
           </a>
           <ul class="dropdown-menu">
+            @if (Auth::user()->is_admin)
+                <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+             @endif
+            <li>
+              <a class="dropdown-item" href="{{ route('article.create') }}">Crea Articolo</a>
+            </li>
+            <li>
+              <a href="{{ route('careers') }}" class="nav-link active" aria-current="page">Lavora con noi</a>
+            </li>
             <li>
               <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout-form').submit()">Logout</a>
             </li>
@@ -36,6 +45,7 @@
               Benvenuto Ospite 
             </a>
             <ul class="dropdown-menu">
+                <li><a href="{{ route('careers') }}" class="nav-link active" aria-current="page">Lavora con noi</a></li>
                 <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                 <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
             </ul>
