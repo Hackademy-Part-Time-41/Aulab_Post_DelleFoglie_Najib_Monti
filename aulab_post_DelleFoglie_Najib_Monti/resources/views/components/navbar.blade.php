@@ -22,7 +22,10 @@
           <ul class="dropdown-menu">
             @if (Auth::user()->is_admin)
                 <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
-             @endif
+              @endif
+             @if (Auth::user()->is_revisor)
+                <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a></li>
+              @endif
             <li>
               <a class="dropdown-item" href="{{ route('article.create') }}">Crea Articolo</a>
             </li>
