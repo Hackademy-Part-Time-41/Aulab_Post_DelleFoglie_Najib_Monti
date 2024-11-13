@@ -1,0 +1,16 @@
+.navText:hover{
+    background-color: lightsteelblue;
+}
+.sfondo{
+    background-color: #feefd2;
+}
+
+.logo{
+    max-width: 60px;
+    height: auto;
+}
+
+.text{
+    color: black;
+    text-decoration: none;
+}
