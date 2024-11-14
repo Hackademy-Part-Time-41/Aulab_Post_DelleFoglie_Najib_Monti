@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{route('homepage')}}">homepage</a>
-
+<nav class="navbar navbar-expand-lg sfondo">
+  <div class="container">
+   <div>
+    <a class="navbar-brand text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpeg')}}" alt=""></a>
+  </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
