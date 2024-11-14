@@ -1,7 +1,8 @@
 <nav class="navbar shadow  sfondo">
   <div class="container">
    <div>
-    <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpg')}}" alt="p"></a>
+    <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
+    <a href="#" class="nav-link active text-dark">Chi siamo</a>
   </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
