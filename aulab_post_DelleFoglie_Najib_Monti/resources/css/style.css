@@ -1,13 +1,69 @@
+/* importo i font   */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* creo delle variabili dove salvo i colori */
+:root{
+    --primary-color: #feefd2;
+    --secondary-color: #c4b5fd;
+    --tertiary-color: lightsteelblue;
+
+    --error-color: #fb7185;
+    --quinary-color: #fdba74;
+    --senary-color: #c4b5fd;
+    --septenary-color: #93c5fd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    /* font-size: 1.2rem; */
+    font-optical-sizing: auto;
+}
+
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
 .navText:hover{
     background-color: lightsteelblue;
 }
+
 .sfondo{
     background-color: #feefd2;
 }
 
+.my-btn{
+    transition: all 0.4s ease-in;
+    background-color: var(--primary-color);
+    color: black;
+}
+.my-btn:hover{
+    background-color: var(--quinary-color);
+}
 .logo{
     max-width: 60px;
     height: auto;
+    text-shadow: 30px 30px 30px var(--quinary-color),
+    30px 30px 30px var(--quinary-color);
+}
+
+
+.my-dropdown-item{
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    width: 100%;
+    /* clear: both; */
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    transition: all 0.3s ease-in-out;
 }
 
 .text{
