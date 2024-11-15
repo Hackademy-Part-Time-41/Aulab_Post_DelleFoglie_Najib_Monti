@@ -18,11 +18,13 @@ class PubblicController extends Controller implements HasMiddleware
     
     }
     
-    
      public function chiSiamo(){
          return view('chiSiamo');
      }
     
+    public function presentati(){
+        return view('presentati');
+    }
     
     public static function middleware()
     {
