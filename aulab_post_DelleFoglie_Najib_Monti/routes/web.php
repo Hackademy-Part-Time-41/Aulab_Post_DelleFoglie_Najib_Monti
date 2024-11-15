@@ -10,7 +10,6 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/', [PubblicController::class, 'homepage'])->name('homepage');
 Route::get('/chiSiamo',[PubblicController::class, 'chiSiamo'])->name('chiSiamo');
-Route::get('/presentati',[PubblicController::class, 'presentati'])->name('presentati');
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
