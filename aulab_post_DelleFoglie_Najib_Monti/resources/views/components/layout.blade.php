@@ -7,7 +7,7 @@
     <title>The Aulab Post</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="sfondo">
     <x-navbar2></x-navbar2>
     <div class="min-vh-100">
         {{ $slot }}

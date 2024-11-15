@@ -1,12 +1,23 @@
 <nav class="bg-secondary shadow">
-    <div class="container-nav  sfondo">
-
-        <div class="my-btn btn mx-2">
-            <a class="dropdown-item" href="{{ route('article.index') }}">Tutti Gli Articoli</a>
-        </div>
+    <div class="container-nav sfondo">
 
         <div class="mx-2">
-            <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpg')}}" alt="p"></a>
+            <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
+        </div>
+        
+        
+        
+       
+        <div class="my-btn btn mx-2">
+            <a class="dropdown-item " href="{{route('chiSiamo')}}">Chi siamo</a>
+        </div>
+        
+        <div class="my-btn btn mx-2">
+            <a class="dropdown-item ">Presentati</a>
+        </div>
+        
+        <div class="my-btn btn mx-2">
+            <a class="dropdown-item" href="{{ route('article.index') }}">Tutti Gli Articoli</a>
         </div>
 
         <div class="mx-2">
