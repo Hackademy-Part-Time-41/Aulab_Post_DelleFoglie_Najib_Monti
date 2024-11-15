@@ -55,7 +55,7 @@
 
               <div class="col-xl-4">
               <h3 class="text-center fw-bold">Crea anche tu il tuo Post-it</h3>
-              <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum at libero tempora vel unde dolor similique itaque magnam aut dicta saepe error, eveniet soluta molestias, delectus, perferendis aliquid. Incidunt, ipsam.</p>
+              <p class="text-center">Pronti per il primo post-it?</p>
               <div class="row justify-content-center">
                 <div class="col-12">
                   <a href="{{route('article.create')}}" class="btn my-btn d-block">Crea Post-it</a>
