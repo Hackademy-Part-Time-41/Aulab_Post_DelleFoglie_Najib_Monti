@@ -2,7 +2,7 @@
     <body class="sfondo">
         
     
-    <div class="container-fluid p-5 text-center sfondo">
+    <div class="container-fluid p-5 bg-secondary-subtle text-center sfondo">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h1 class="display-1 text-center mb-3 tangerine-regular sfondo">Bentornato, Amministratore {{Auth::user()->name}}</h1>
@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid p-5 text-center sfondo">
+    <div class="container-fluid p-5 bg-secondary-subtle text-center sfondo">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2 class="display-1 text-center mb-3 tangerine-regular sfondo">Richieste per il ruolo di Revisore</h2>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid p-5 text-center sfondo">
+    <div class="container-fluid p-5 bg-secondary-subtle text-center sfondo">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2 class="display-1 text-center mb-3 tangerine-regular sfondo">Richieste per il ruolo di Redattore</h2>

@@ -51,6 +51,8 @@
 
 .img-my{
     max-width: 53rem;
+    display: flex;
+    justify-content: center;
     
 }
 
