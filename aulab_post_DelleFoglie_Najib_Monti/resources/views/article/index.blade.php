@@ -1,7 +1,7 @@
 <x-layout>
     <div class="row justify-content-center">
         <div class="col-12">
-            <h1 class="display-1 text-center mb-3">Tutti gli articoli</h1>
+            <h1 class="display-1 text-center mb-3 tangerine-regular">Tutti gli articoli</h1>
         </div>
         @foreach ($articles as $article )
           <div class="col-12 col-md-3">

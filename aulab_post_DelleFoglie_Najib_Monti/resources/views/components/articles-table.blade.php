@@ -1,4 +1,5 @@
-<table class="table table-striped table-hover">
+<x-layout>
+<table class="table table-striped table-hover sfondo">
     <thead class="table-dark">
       <tr>
         <th scope="col">#</th>
@@ -29,3 +30,4 @@
       @endforeach
     </tbody>
 </table>
+</x-layout>
