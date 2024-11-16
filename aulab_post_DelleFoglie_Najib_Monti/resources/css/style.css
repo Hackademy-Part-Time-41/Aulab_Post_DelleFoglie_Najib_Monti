@@ -72,7 +72,7 @@
 }
 
 .my-btn{
-    transition: all 0.4s ease-in;
+    transition: all 0.3s ease-in-out;
     background-color: var(--primary-color);
     color: black;
 }
@@ -112,4 +112,18 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+}
+
+.terzo-colore{
+    background-color: #83453d;
+}
+.quarto-colore{
+    background-color: #ebe1dcbd;
+}
+
+.corallo-chiaro{
+    background-color: #ff7f50;
+}
+.grigio-chiaro{
+    background-color: #a7b1bb;
 }

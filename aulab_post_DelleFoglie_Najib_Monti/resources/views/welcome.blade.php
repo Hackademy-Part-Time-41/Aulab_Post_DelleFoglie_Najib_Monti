@@ -17,90 +17,57 @@
             <div class="row wrap shadow align-items-center">
 
               <div class="img-my col-12 col-md-11 col-lg-10 col-xl-6">
-                <img class="img-fluid" src="{{Storage::url('images/Designer_35.jpg')}}" alt="">
+                <img class="img-fluid" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="">
               </div>
 
               <div class="row justify-content-around col-12 col-md-9 col-xl-8 col-xxl-6">
 
                 <div class="col-12 col-xl-4 mt-3">
-                  <h2 class="text-center mb-3 fw-bold">Benvenuto nella nostra community</h2>
-                  <p class="text-center ">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt numquam aliquid asperiores repellat distinctio possimus saepe nostrum quibusdam quis quod. Quisquam mollitia tempora nostrum qui culpa recusandae, nisi assumenda cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni corrupti harum necessitatibus laborum possimus repudiandae veniam, ut natus perferendis fugit dicta delectus architecto, distinctio eos odit dolorem, tempora impedit hic.
-                  </p>
+                    <h2 class="text-center mb-3 fw-bolder fs-1 tangerine-regular">Benvenuto nella nostra community</h2>
+                      <p class="text-center ">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt numquam aliquid asperiores repellat distinctio possimus saepe nostrum quibusdam quis quod. Quisquam mollitia tempora nostrum qui culpa recusandae, nisi assumenda cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni corrupti harum necessitatibus laborum possimus repudiandae veniam, ut natus perferendis fugit dicta delectus architecto, distinctio eos odit dolorem, tempora impedit hic.
+                      </p>
                 </div>
 
-                <div class="col-12 col-xl-6 mt-3">
-                  <h3 class="text-center fw-bold">Crea anche te il tuo Post-it</h3>
-                  <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum at libero tempora vel unde dolor similique itaque magnam aut dicta saepe error, eveniet soluta molestias, delectus, perferendis aliquid. Incidunt, ipsam.</p>
-                  <div class="row justify-content-center">
-                    <div class="col-12">
-                      <a href="{{route('article.create')}}" class="btn my-btn d-block">Crea Post-it</a>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="col-12 row justify-content-around">
+                {{-- <div class="col-12 row justify-content-around">
                   @foreach ($articles as $article)
                     <div class="shadow postIt  col-10 col-md-3 col-lg-2">
                       <div class=""  style="min-width: 8rem">
                         {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top mt-2" alt="articolo:{{$article->title}}"> --}}
-                        <img src="https://picsum.photos/400/400" class="card-img-top mt-2" alt="articolo:{{$article->title}}">
+                          {{-- <img src="https://picsum.photos/400/400" class="card-img-top mt-2" alt="articolo:{{$article->title}}">
                         
-                        <div class="">
+                          <div class="">
     
-                          <h4 class="text-center postIt-text">{{$article->title}}</h4>
-                          <p class="text-center postIt-text">{{$article->subtitle}}</p>
-                          <p class="text-center">
-                            <a href="{{ route('article.byCategory', $article->category)}}" class="postIt-text">{{$article->category->name}}</a>
-                          </p>
-    
-                        </div>
-                        <div class="text-center">
+                            <h4 class="text-center postIt-text">{{$article->title}}</h4>
+                            <p class="text-center postIt-text">{{$article->subtitle}}</p>
+                            <p class="text-center">
+                              <a href="{{ route('article.byCategory', $article->category)}}" class="postIt-text">{{$article->category->name}}</a>
+                            </p>
+                          </div>
+                          <div class="text-center">
                                 <a href="{{ route('article.show', $article)}}" class="postIt-text my-btn">Leggi</a>
-                        </div>
+                          </div>
                       </div>
                     </div>
                   @endforeach
-              </div>
-
-              </div>
-
-              <div class="col-xl-4">
-              <h3 class="text-center fw-bold">Crea anche tu il tuo Post-it</h3>
-              <p class="text-center">Pronti per il primo post-it?</p>
-              <div class="row justify-content-center">
-                <div class="col-12">
-                  <a href="{{route('article.create')}}" class="btn my-btn d-block">Crea Post-it</a>
+              </div> --}} 
+           </div>
+           <div class="col-12 row justify-content-around ">
+            @foreach ($categories as $category)
+              <div class="shadow postIt  col-10 col-md-3 col-lg-3 mt-3">
+                <div class=""  style="min-width: 8rem">
+                  {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top mt-2" alt="articolo:{{$article->title}}"> --}}
+                    <img src="https://picsum.photos/400/400" class="card-img-top mt-2" alt="categoria:{{$category->name}}">
+                  
+                    <div class="">
+                      <p class="text-center">
+                        <a href="{{ route('article.byCategory', $category->id)}}" class="postIt-text fs-1 fw-bolder ">{{$category->name}}</a>
+                      </p>
+                    </div>
                 </div>
               </div>
-            </div>
-          
-            </div>
-
-            
-
-            @foreach ($articles as $article )
-              <div class="col-12 col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="immagine dell'articolo:{{$article->title}}">
-                    
-                    <div class="card-body">
-
-                      <h5 class="card-title">{{$article->title}}</h5>
-                      <p class="card-subtitle">{{$article->subtitle}}</p>
-                      <p class="small text-muted">Categoria:
-                        <a href="{{ route('article.byCategory', $article->category)}}" class="text-capitalize text-muted">{{$article->category->name}}</a>
-                      </p>
-
-                    </div>
-                    <div class="card-footer d-flex justify-content-between align-item-center">
-                        <p>redatto il {{$article->created_at->format('d/m/y')}} <br>
-                            da <a href="{{ route('article.byUser', $article->user)}}">{{$article->user->name}}</a></p>
-                            <a href="{{ route('article.show', $article)}}" class="btn btn-outline-secondary">Leggi</a>
-                    </div>
-                  </div>
-            </div>  
             @endforeach
         </div>
-    </div>
+          </div>
 </x-layout>
