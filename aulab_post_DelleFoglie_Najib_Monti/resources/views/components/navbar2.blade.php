@@ -13,7 +13,7 @@
         </div>
         
         <div class="my-btn btn mx-2">
-            <a class="dropdown-item" href="{{route('presentati')}}">Presentati</a>
+            <a class="dropdown-item ">Presentati</a>
         </div>
         
         <div class="my-btn btn mx-2">
