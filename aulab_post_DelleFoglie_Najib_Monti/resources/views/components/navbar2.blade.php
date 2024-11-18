@@ -3,6 +3,7 @@
 
         <div class="mx-2">
             <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo container-xs" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
+
         </div>
          
         <div class="my-btn btn mx-2">
