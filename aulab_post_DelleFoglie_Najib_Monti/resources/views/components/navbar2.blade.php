@@ -2,9 +2,13 @@
     <div class="container-nav sfondo">
 
         <div class="mx-2">
+<<<<<<< HEAD
             <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
 <<<<<<< HEAD
 =======
+=======
+            <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo container-xs" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
+>>>>>>> 406d7cf92444d485812dc9e15c69dcb0fc6b40f4
         </div>
          
         <div class="my-btn btn mx-2">

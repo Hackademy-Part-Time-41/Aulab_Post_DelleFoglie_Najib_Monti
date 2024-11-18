@@ -127,3 +127,42 @@
 .grigio-chiaro{
     background-color: #a7b1bb;
 }
+.logo-fbi{
+    max-width: 600px;
+    height: 600px;
+}
+.image-container {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.fit-img {
+    width: 10%;
+    height: 10%;
+    object-fit: hidden; /* L'immagine coprirà il contenitore, ritagliandosi se necessario */
+}
+.image-container2 {
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+}
+
+.fit-img2 {
+    width: 20%;
+    height: 20%;
+    object-fit: hidden; /* L'immagine coprirà il contenitore, ritagliandosi se necessario */
+}
+
+.social-icon {
+    width: 30px; /* Dimensione piccola per le immagini dei social */
+    height: auto; /* Mantiene il rapporto di aspetto */
+    transition: transform 0.3s ease; /* Transizione dolce al passaggio del mouse */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Ingrandisce leggermente l'immagine al passaggio del mouse */
+}
+footer.col-4 {
+    padding: 0 15px; /* Rimuove i margini laterali per una spaziatura più compatta */
+}
