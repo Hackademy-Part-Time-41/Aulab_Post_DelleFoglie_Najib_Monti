@@ -1,23 +1,23 @@
-<x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+<x-layout class="sfondo">
+    <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">ACCEDI</h1>
+                <h1 class="display-1 text-center tangerine-regular">ACCEDI</h1>
             </div>
         </div>
-        <div class="container m-5">
-            <div class="row justify-content-center">
-                <div class="cool-12 cool-md-8">
-                    <form action="{{ route('login') }}" method="POST" class="card p-5 shadow">
+        <div class="container m-6 p-3 mb-2 grigio-chiaro">
+            <div class="row justify-content-center p-3 mb-2 grigio-chiaro">
+                <div class="cool-12 cool-md-8 navText:hover">
+                    <form action="{{ route('login') }}" method="POST" class="card p-5 shadow p-3 mb-2 corallo-chiaro text-dark">
                         @csrf
-                        <div class="mb-3">
+                        <div class="mb-3 navText:hover">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-contoll" id="email" name="email" value="{{ old('email') }}">
                             @error('email')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 navText:hover">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-contoll" id="password" name="password">
                             @error('password')
@@ -25,9 +25,9 @@
                             @enderror
                         </div>
                         <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
-                            <button type="submit" class="btn btn-outline-secondary">Accedi</button>
+                            <button type="submit" class="btn btn-outline-secondary my-btn">Accedi</button>
                             <p class="mt-2">Non sei ancora registrato?</p>
-                            <a href="{{ route('register') }}" class="text-secondary">Clicca Qui</a>
+                            <a href="{{ route('register') }}" class="text-black">Clicca Qui</a>
                         </div>
                     </form>
                 </div>

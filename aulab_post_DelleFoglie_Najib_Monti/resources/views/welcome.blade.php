@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid bgc-yellow">
         <div class="row justify-content-center">
 
             @if (session('message'))
@@ -13,84 +13,61 @@
                   {{session('alert')}}
                 </div>
             @endif
-
+            
             <div class="row wrap shadow align-items-center">
-              <div class="d-flex col-12  col-md-9 justify-content-end col-lg-7">
-                <img class="img-fluid" src="{{Storage::url('images/Designer_35.jpg')}}" alt="">
+
+              <div class="img-my col-12 col-md-11 col-lg-10 col-xl-6">
+                <img class="img-fluid" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="">
               </div>
-              <div class="col-12 col-md-10 col-lg-5 shadow">
-                <h2 class="text-center mb-3 fw-bold">Benvenuto nella nostra community</h2>
-                <p class="text-center ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt numquam aliquid asperiores repellat distinctio possimus saepe nostrum quibusdam quis quod. Quisquam mollitia tempora nostrum qui culpa recusandae, nisi assumenda cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni corrupti harum necessitatibus laborum possimus repudiandae veniam, ut natus perferendis fugit dicta delectus architecto, distinctio eos odit dolorem, tempora impedit hic.</p>
 
-                <div class="row justify-content-center">
-                    @foreach ($articles as $article)
-                      <div class="shadow sfondo col-12 col-md-5 col-lg-3">
-                        <div class="" style="min-width: 6.5rem;">
-                          <img src="{{Storage::url($article->image)}}" class="card-img-top mt-2 " alt="articolo:{{$article->title}}">
-                          
-                          <div class="">
-      
-                            <h5 class="fs-6">{{$article->title}}</h5>
-                            <p class="fs-7">{{$article->subtitle}}</p>
-                            <p class="fs-7 text-muted">Categoria:
-                              <a href="{{ route('article.byCategory', $article->category)}}" class="text-muted">{{$article->category->name}}</a>
-                            </p>
-      
-                          </div>
-                          <div class="">
-                              <p>redatto il {{$article->created_at->format('d/m/y')}} <br>
-                                  da <a class="text-decoration-none text-dark" href="{{ route('article.byUser', $article->user)}}">{{$article->user->name}}</a></p>
-                                  <a href="{{ route('article.show', $article)}}" class="btn my-btn">Leggi</a>
-                          </div>
-                        </div>
-                      </div>
-                    @endforeach
-                </div>
+              <div class="row justify-content-around col-12 col-md-9 col-xl-8 col-xxl-6">
 
-                {{-- <div>
-                  <div>
-                    <a href="{{route('article.index')}}" class="my-btn btn">Tutti gli articoli</a>
-                </div>
-
-                <div class="row justify-content-center">
-                    <a href="{{route('article.create')}}" class="my-btn btn">Scrivi un articolo</a>
-                </div>
-
-                <div class=" col-1 shadow">
-                  <a href="{{route('careers')}}" class="my-btn btn">Lavora con noi</a>
-                </div>
-                </div> --}}
-
-
-
-              </div>
-              
-          
-            </div>
-            {{-- @dd($articles) --}}
-
-            @foreach ($articles as $article )
-              <div class="col-12 col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="immagine dell'articolo:{{$article->title}}">
-                    
-                    <div class="card-body">
-
-                      <h5 class="card-title">{{$article->title}}</h5>
-                      <p class="card-subtitle">{{$article->subtitle}}</p>
-                      <p class="small text-muted">Categoria:
-                        <a href="{{ route('article.byCategory', $article->category)}}" class="text-capitalize text-muted">{{$article->category->name}}</a>
+                <div class="col-12 col-xl-4 mt-3">
+                    <h2 class="text-center mb-3 fw-bolder fs-1 tangerine-regular">Benvenuto nella nostra community</h2>
+                      <p class="text-center ">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt numquam aliquid asperiores repellat distinctio possimus saepe nostrum quibusdam quis quod. Quisquam mollitia tempora nostrum qui culpa recusandae, nisi assumenda cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni corrupti harum necessitatibus laborum possimus repudiandae veniam, ut natus perferendis fugit dicta delectus architecto, distinctio eos odit dolorem, tempora impedit hic.
                       </p>
+                </div>
 
+
+                {{-- <div class="col-12 row justify-content-around">
+                  @foreach ($articles as $article)
+                    <div class="shadow postIt  col-10 col-md-3 col-lg-2">
+                      <div class=""  style="min-width: 8rem">
+                        {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top mt-2" alt="articolo:{{$article->title}}"> --}}
+                          {{-- <img src="https://picsum.photos/400/400" class="card-img-top mt-2" alt="articolo:{{$article->title}}">
+                        
+                          <div class="">
+    
+                            <h4 class="text-center postIt-text">{{$article->title}}</h4>
+                            <p class="text-center postIt-text">{{$article->subtitle}}</p>
+                            <p class="text-center">
+                              <a href="{{ route('article.byCategory', $article->category)}}" class="postIt-text">{{$article->category->name}}</a>
+                            </p>
+                          </div>
+                          <div class="text-center">
+                                <a href="{{ route('article.show', $article)}}" class="postIt-text my-btn">Leggi</a>
+                          </div>
+                      </div>
                     </div>
-                    <div class="card-footer d-flex justify-content-between align-item-center">
-                        <p>redatto il {{$article->created_at->format('d/m/y')}} <br>
-                            da <a href="{{ route('article.byUser', $article->user)}}">{{$article->user->name}}</a></p>
-                            <a href="{{ route('article.show', $article)}}" class="btn btn-outline-secondary">Leggi</a>
+                  @endforeach
+              </div> --}} 
+           </div>
+           <div class="col-12 row justify-content-around ">
+            @foreach ($categories as $category)
+              <div class="shadow postIt  col-10 col-md-3 col-lg-3 mt-3">
+                <div class=""  style="min-width: 8rem">
+                  {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top mt-2" alt="articolo:{{$article->title}}"> --}}
+                    <img src="https://picsum.photos/400/400" class="card-img-top mt-2" alt="categoria:{{$category->name}}">
+                  
+                    <div class="">
+                      <p class="text-center">
+                        <a href="{{ route('article.byCategory', $category->id)}}" class="postIt-text fs-1 fw-bolder ">{{$category->name}}</a>
+                      </p>
                     </div>
-                  </div>
-            </div>  
+                </div>
+              </div>
             @endforeach
         </div>
-    </div>
+          </div>
 </x-layout>

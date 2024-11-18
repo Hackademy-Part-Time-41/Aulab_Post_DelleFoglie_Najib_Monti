@@ -9,12 +9,12 @@ use App\Http\Controllers\RevisorController;
 
 
 Route::get('/', [PubblicController::class, 'homepage'])->name('homepage');
-
+Route::get('/chiSiamo',[PubblicController::class, 'chiSiamo'])->name('chiSiamo');
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
-
+Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
 
 Route::post('/article/store', [ArticleController::class,'store'])->name('article.store'); 
 

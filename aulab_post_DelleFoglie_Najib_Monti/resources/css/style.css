@@ -1,11 +1,13 @@
-/* importo i font   */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /* creo delle variabili dove salvo i colori */
+
 :root{
+    
     --primary-color: #feefd2;
     --secondary-color: #c4b5fd;
     --tertiary-color: lightsteelblue;
-
     --error-color: #fb7185;
     --quinary-color: #fdba74;
     --senary-color: #c4b5fd;
@@ -18,8 +20,40 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
+    font-size: medium;
     /* font-size: 1.2rem; */
     font-optical-sizing: auto;
+}
+
+
+.bgc-yellow{
+   background-color: var(--primary-color);;
+}
+
+.postIt{
+    background-color: var(--primary-color);
+    margin: 4px 8px;
+    min-width: 150px;
+    transition: all 0.3s ease-out;
+}
+.postIt:hover{
+    background-color: var(--quinary-color);
+    translate: 0px -10px;
+}
+.postIt-text{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+}
+
+.img-my{
+    max-width: 53rem;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .container-nav{
@@ -38,13 +72,14 @@
 }
 
 .my-btn{
-    transition: all 0.4s ease-in;
+    transition: all 0.3s ease-in-out;
     background-color: var(--primary-color);
     color: black;
 }
 .my-btn:hover{
     background-color: var(--quinary-color);
 }
+
 .logo{
     max-width: 60px;
     height: auto;
@@ -66,7 +101,29 @@
     transition: all 0.3s ease-in-out;
 }
 
-.text{
-    color: black;
-    text-decoration: none;
+.tangerine-regular{
+    font-family: "Tangerine", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dancing-script {
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.terzo-colore{
+    background-color: #83453d;
+}
+.quarto-colore{
+    background-color: #ebe1dcbd;
+}
+
+.corallo-chiaro{
+    background-color: #ff7f50;
+}
+.grigio-chiaro{
+    background-color: #a7b1bb;
 }

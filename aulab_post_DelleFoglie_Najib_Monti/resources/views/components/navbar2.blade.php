@@ -1,12 +1,29 @@
-
 <nav class="bg-secondary shadow">
-    <div class="container-nav  sfondo">
+    <div class="container-nav sfondo">
 
         <div class="mx-2">
             <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
+<<<<<<< HEAD
+=======
         </div>
-
+         
+        <div class="my-btn btn mx-2">
+            <a class="dropdown-item " href="{{route('chiSiamo')}}">Chi siamo</a>
+>>>>>>> 06bdcdff80b652cfa62690300ca2b839e9cb5a7a
+        </div>
         
+        <form class="d-flex mx-2" action="{{route('article.search')}}" method="GET">
+            <input class="form-control me-2" type="search" placeholder="Cerca tra gli articoli" aria-label="Search" name="query">
+            <button class="btn my-btn " type="submit">Cerca</button>
+        </form>
+        
+        <div class="my-btn btn mx-2">
+            <a class="dropdown-item ">Presentati</a>
+        </div>
+        
+        <div class="my-btn btn mx-2">
+            <a class="dropdown-item" href="{{ route('article.index') }}">Tutti Gli Articoli</a>
+        </div>
 
         <div class="mx-2">
             @auth
@@ -27,9 +44,7 @@
                     </li>
                 @endif
                 <hr class="dropdown-divider">
-                <li>
-                    <a class="dropdown-item" href="{{ route('article.index') }}">Tutti Gli Articoli</a>
-                </li>
+                
                 <hr class="dropdown-divider">
                 <li>
                     <a class="dropdown-item" href="{{ route('article.create') }}">Crea Articolo</a>

@@ -17,6 +17,13 @@ class PubblicController extends Controller implements HasMiddleware
         return view('welcome', compact('articles'));
     
     }
+    
+    
+     public function chiSiamo(){
+         return view('chiSiamo');
+     }
+    
+    
     public static function middleware()
     {
         return [
@@ -63,3 +70,4 @@ class PubblicController extends Controller implements HasMiddleware
     }
 
 }
+
