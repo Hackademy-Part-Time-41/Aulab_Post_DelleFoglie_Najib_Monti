@@ -2,7 +2,7 @@
     <div class="container-nav sfondo">
 
         <div class="mx-2">
-<<<<<<< HEAD
+<<
             <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
 <<<<<<< HEAD
 =======
