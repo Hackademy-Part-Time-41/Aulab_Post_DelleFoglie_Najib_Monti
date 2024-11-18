@@ -54,6 +54,14 @@
                         </div>
 
                         <div class="mt-3">
+                            <label for="tags" class="form-label">Tag</label>
+                            <input class="form-control @error('tags') is-invalid @enderror" type="text" name="tags" id="tags" value="{{old('tags')}}">
+                            @error('tags')
+                                <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
+                        </div>
+
+                        <div class="mt-3">
                             <label for="body">Corpo dell'articolo</label>
                             <input class="py-5 form-control @error('body') is-invalid @enderror" class="py-5" type="text" name="body" id="body" value="{{old('body')}}">
                             @error('body')
