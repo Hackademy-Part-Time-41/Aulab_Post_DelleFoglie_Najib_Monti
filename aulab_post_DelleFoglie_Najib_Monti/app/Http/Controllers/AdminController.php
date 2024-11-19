@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Tag;
+
+
 
 class AdminController extends Controller
 {
@@ -33,4 +36,17 @@ class AdminController extends Controller
         $user->save();
         return redirect(route('admin.dashboard'))->with('message', "Hai reso $user->name redattore");
     }
+
+    public function editTag(Request $request, tag $tag){
+        $request->validate([
+            'name' => 'required|min:3',
+        ]);
+        $tag->update([
+            'name' => strtolower($request->name),
+        ]);
+        return redirect()->back()->with('message', 'Tag aggiormato correttamente');
+    }
+        
+
 }
+
