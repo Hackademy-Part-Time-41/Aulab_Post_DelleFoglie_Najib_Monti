@@ -69,10 +69,11 @@
                     Benvenuto Ospite 
                 </a>
                 <ul class="dropdown-menu">
-                    <li>
+                    {{-- <li>
                         <a class="dropdown-item" href="{{ route('article.index') }}">Tutti Gli Articoli</a>
-                    </li>
-                    <li><a href="{{ route('careers') }}" class="nav-link active" aria-current="page">Lavora con noi</a></li>
+                    </li> --}}
+                    {{-- Aggiustato menu a tendina --}}
+                    <li><a href="{{ route('careers') }}" class="dropdown-item" aria-current="page">Lavora con noi</a></li>
                     <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                     <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                 </ul>

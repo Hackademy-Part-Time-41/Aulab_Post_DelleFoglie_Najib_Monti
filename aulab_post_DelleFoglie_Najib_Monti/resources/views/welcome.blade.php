@@ -26,9 +26,10 @@
                     <div class="shadow corallo-chiaro">
                         <h1 class="text-center mb-3 fw-bolder fs-1 tangerine-regular">Benvenuto nella nostra community</h1>
                      </div>
-                  <p class="text-center dancing-script fs-4">
-                        Ciao nuovo utente e benvenuto su Il Post-it, la tua fonte inesauribile di notizie, dalla politica all'intrattenimento, fino ad arrivare a musica e contenuti hi-tech. Qui potrai sbizzarrirti nel cercare succosi gossip e semplici informazioni, e perchè no magari anche tu potresti essere il nostro prossimo scrittore. Quindi che aspetti? Pubblica un Post-it
-                      </p>
+                     <div class="text-center">
+                      {{-- modificata struttura del div del testo di benvenuto nella community --}}
+                        <p class="dancing-script fs-5">Ciao nuovo utente e benvenuto su Il Post-it, la tua fonte inesauribile di notizie, dalla politica all'intrattenimento, fino ad arrivare a musica e contenuti hi-tech. Qui potrai sbizzarrirti nel cercare succosi gossip e semplici informazioni, e perchè no magari anche tu potresti essere il nostro prossimo scrittore. Quindi che aspetti? Pubblica un Post-it</p>
+                     </div>
                 </div>
            </div>
            <div class="col-12 row justify-content-around ">
