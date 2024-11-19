@@ -7,7 +7,7 @@
         </div>
         <div class="container m-6 p-3 mb-2 grigio-chiaro">
             <div class="row justify-content-center p-3 mb-2 grigio-chiaro">
-                <div class="col-12 col-md-8 navText:hover">
+                <div class="col-12 col-md-8 navText">
                     <form action="{{ route('login') }}" method="POST" class="card p-5 shadow p-3 mb-2 corallo-chiaro text-dark">
                         @csrf
                         <div class="mb-3">

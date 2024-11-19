@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 sfondo text-center">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h1 class="display-1">Registrati</h1>
@@ -7,9 +7,9 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-                <form action="{{route('register') }}" method="POST" class="card p-5 shadow">
+        <div class="row justify-content-center grigio-chiaro p-3">
+            <div class="col-12 col-md-8 grigio-chiaro p-3">
+                <form action="{{route('register') }}" method="POST" class="card p-5 shadow corallo-chiaro">
                 @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome Utente</label>
@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="btn btn-outline-secondary">Registrati</button>
+                        <button type="submit" class="btn btn-outline-secondary my-btn">Registrati</button>
                     </div>
 
                 </form>
