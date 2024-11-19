@@ -31,30 +31,6 @@
                         <p class="dancing-script fs-5">Ciao nuovo utente e benvenuto su Il Post-it, la tua fonte inesauribile di notizie, dalla politica all'intrattenimento, fino ad arrivare a musica e contenuti hi-tech. Qui potrai sbizzarrirti nel cercare succosi gossip e semplici informazioni, e perchè no magari anche tu potresti essere il nostro prossimo scrittore. Quindi che aspetti? Pubblica un Post-it</p>
                      </div>
                 </div>
-
-
-                {{-- <div class="col-12 row justify-content-around">
-                  @foreach ($articles as $article)
-                    <div class="shadow postIt  col-10 col-md-3 col-lg-2">
-                      <div class=""  style="min-width: 8rem">
-                        {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top mt-2" alt="articolo:{{$article->title}}"> --}}
-                          {{-- <img src="https://picsum.photos/400/400" class="card-img-top mt-2" alt="articolo:{{$article->title}}">
-                        
-                          <div class="">
-    
-                            <h4 class="text-center postIt-text">{{$article->title}}</h4>
-                            <p class="text-center postIt-text">{{$article->subtitle}}</p>
-                            <p class="text-center">
-                              <a href="{{ route('article.byCategory', $article->category)}}" class="postIt-text">{{$article->category->name}}</a>
-                            </p>
-                          </div>
-                          <div class="text-center">
-                                <a href="{{ route('article.show', $article)}}" class="postIt-text my-btn">Leggi</a>
-                          </div>
-                      </div>
-                    </div>
-                  @endforeach
-              </div> --}} 
            </div>
            <div class="col-12 row justify-content-around ">
             @foreach ($categories as $category)
