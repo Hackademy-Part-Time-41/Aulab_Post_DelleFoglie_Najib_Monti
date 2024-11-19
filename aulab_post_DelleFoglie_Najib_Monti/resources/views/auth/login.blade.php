@@ -7,19 +7,20 @@
         </div>
         <div class="container m-6 p-3 mb-2 grigio-chiaro">
             <div class="row justify-content-center p-3 mb-2 grigio-chiaro">
-                <div class="cool-12 cool-md-8 navText:hover">
+                <div class="col-12 col-md-8 navText:hover">
                     <form action="{{ route('login') }}" method="POST" class="card p-5 shadow p-3 mb-2 corallo-chiaro text-dark">
                         @csrf
-                        <div class="mb-3 navText:hover">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-contoll" id="email" name="email" value="{{ old('email') }}">
+                        <div class="mb-3">
+                            {{-- allineato label --}}
+                            <label for="email" class="form-label ms-4">E-mail</label>
+                            <input type="email" class="form-contol" id="email" name="email" value="{{ old('email') }}">
                             @error('email')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <div class="mb-3 navText:hover">
+                        <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-contoll" id="password" name="password">
+                            <input type="password" class="form-contol" id="password" name="password">
                             @error('password')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
