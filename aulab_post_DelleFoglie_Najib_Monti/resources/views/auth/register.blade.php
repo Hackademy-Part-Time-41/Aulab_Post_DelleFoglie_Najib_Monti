@@ -1,50 +1,60 @@
-<x-layout>
-    <div class="container-fluid p-5 sfondo text-center">
+<x-layout class="sfondo">
+    <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Registrati</h1>
+                <h1 class="display-1 text-center tangerine-regular">Registrati</h1>
             </div>
         </div>
-    </div>
-    <div class="container my-5">
-        <div class="row justify-content-center grigio-chiaro p-3">
-            <div class="col-12 col-md-8 grigio-chiaro p-3">
-                <form action="{{route('register') }}" method="POST" class="card p-5 shadow corallo-chiaro">
-                @csrf
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nome Utente</label>
-                        <input type="text" class="form-controll" id="name" name="name" value="{{ old('name') }}">
-                        @error('name')
-                            <span class="text-danger"> {{$message}}</span>
-                        @enderror
-                    </div>
+        <div class="container m-6 p-3 mb-2 grigio-chiaro">
+            <div class="row justify-content-center p-3 mb-2 grigio-chiaro">
+                <div class="col-12 col-md-8">
+                    <form action="{{ route('register') }}" method="POST" class="card p-5 shadow p-3 mb-2 corallo-chiaro text-dark">
+                        @csrf
+                        <!-- Nome Utente -->
+                        <div class="mb-3 d-flex justify-content-center align-items-center">
+                            <label for="name" class="form-label me-3 text-center w-25">Nome Utente</label>
+                            <input type="text" id="name" name="name" value="{{ old('name') }}" class="form-control w-50">
+                            @error('name')
+                                <span class="text-danger"> {{$message}}</span>
+                            @enderror
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-controll" id="email" name="email" value="{{ old('email') }}">
-                        @error('email')
-                            <span class="text-danger"> {{ $message }}</span>
-                        @enderror
-                    </div>
+                        <!-- Email -->
+                        <div class="mb-3 d-flex justify-content-center align-items-center">
+                            <label for="email" class="form-label me-3 text-center w-25">E-mail</label>
+                            <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control w-50">
+                            @error('email')
+                                <span class="text-danger"> {{ $message }}</span>
+                            @enderror
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-controll" id="password" name="password">
-                        @error('password')
-                            <span class="text-danger"> {{ $message }}</span>
-                        @enderror
-                    </div>
+                        <!-- Password -->
+                        <div class="mb-3 d-flex justify-content-center align-items-center">
+                            <label for="password" class="form-label me-3 text-center w-25">Password</label>
+                            <input type="password" id="password" name="password" class="form-control w-50">
+                            @error('password')
+                                <span class="text-danger"> {{ $message }}</span>
+                            @enderror
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Conferma Password</label>
-                        <input type="password" class="form-controll" id="password_confirmation" name="password_confirmation">
-                    </div>
+                        <!-- Conferma Password -->
+                        <div class="mb-3 d-flex justify-content-center align-items-center">
+                            <label for="password_confirmation" class="form-label me-3 text-center w-25">Conferma Password</label>
+                            <input type="password" id="password_confirmation" name="password_confirmation" class="form-control w-50">
+                        </div>
 
-                    <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="btn btn-outline-secondary my-btn">Registrati</button>
-                    </div>
+                        <!-- Bottone Registrati -->
+                        <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                            <button type="submit" class="btn btn-outline-secondary my-btn">Registrati</button>
+                        </div>
 
-                </form>
+                        <!-- Link per il login -->
+                        <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                            <p class="mt-2">Hai già un account?</p>
+                            <a href="{{ route('login') }}" class="text-black">Clicca Qui per Accedere</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
