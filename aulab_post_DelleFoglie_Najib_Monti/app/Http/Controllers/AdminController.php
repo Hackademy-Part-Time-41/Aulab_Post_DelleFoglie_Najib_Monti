@@ -7,6 +7,9 @@ use App\Models\Tag;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Tag;
+use App\Models\Category;
+
 
 class AdminController extends Controller
 {
@@ -34,45 +37,5 @@ class AdminController extends Controller
         $user->is_writer = true;
         $user->save();
         return redirect(route('admin.dashboard'))->with('message', "Hai reso $user->name redattore");
-    }
-
-    public function editTag(Request $request,Tag $tag){
-        $request->validate([
-            'name' => 'required|unique:tags',
-        ]);
-        $tag->update([
-            'name' => strtolower($request->name),
-        ]);
-        return redirect()->back()->with('message', "Hai modificato il tag $tag->name correttamente");
-    }
-
-    public function deleteTag(Tag $tag){
-        foreach($tag->articles as $article){
-            $article->tags()->detach($tag);
-        }
-        $tag->delete();
-        return redirect()->back()->with('message', "Hai cancellato il tag $tag->name correttamente");
-    }
-
-    public function editCategory(Request $request,Category $category){
-        $request->validate([
-            'name' => 'required|unique:categories',
-        ]);
-        $category->update([
-            'name' => strtolower($request->name),
-        ]);
-        return redirect()->back()->with('message', "Hai modificato la categoria $category->name correttamente");
-    }
-
-    public function deleteCategory(Category $category){
-        $category->delete();
-        return redirect()->back()->with('message', "Hai cancellato la categoria $category->name correttamente");
-    }
-
-    public function storeCategory(Request $request){
-        Category::create([
-            'name' => strtolower($request->name),
-        ]);
-        return redirect()->back()->with('message', "Hai creato la categoria $request->name correttamente");
     }
 }

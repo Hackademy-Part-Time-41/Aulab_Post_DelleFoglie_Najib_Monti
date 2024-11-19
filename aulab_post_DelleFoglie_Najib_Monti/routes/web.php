@@ -16,6 +16,8 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
 
+
+
 Route::post('/article/store', [ArticleController::class,'store'])->name('article.store'); 
 
 Route::get('article/user/{user}', [ArticleController::class, 'byUser'])->name('article.byUser');
@@ -25,14 +27,10 @@ Route::post('/careers/submit', [PubblicController::class, 'careersSubmit'])->nam
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::patch('/admin/{user}/set-admin',[AdminController::class,'setAdmin'])->name('admin.setAdmin');
-    Route::patch('/admin/{user}/set-revisor',[AdminController::class,'setRevisor'])->name('admin.setRevisor');
-    Route::patch('/admin/{user}/set-writer',[AdminController::class,'setWriter'])->name('admin.setWriter');
-    Route::put('/admin/edit/tag/{tag}', [AdminController::class, 'editTag'])->name('admin.editTag');
-    Route::put('/admin/delete/tag/{tag}', [AdminController::class, 'deleteTag'])->name('admin.deleteTag');
-    Route::put('/admin/edit/category/{category}', [AdminController::class, 'editCategory'])->name('admin.editCategory');
-    Route::put('/admin/delete/category/{category}', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory');
-    Route::put('/admin/category/store', [AdminController::class, 'storeCategory'])->name('admin.storeCategory');
+    route::patch('/admin/{user}/set-admin',[AdminController::class,'setAdmin'])->name('admin.setAdmin');
+    route::patch('/admin/{user}/set-revisor',[AdminController::class,'setRevisor'])->name('admin.setRevisor');
+    route::patch('/admin/{user}/set-writer',[AdminController::class,'setWriter'])->name('admin.setWriter');
+
 });
 
 Route::middleware('revisor')->group(function() {
