@@ -2,18 +2,14 @@
     <div class="container-nav sfondo">
 
         <div class="mx-2">
-<<<<<<< HEAD
-            <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
-<<<<<<< HEAD
-=======
-=======
+
             <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo container-xs" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
->>>>>>> 406d7cf92444d485812dc9e15c69dcb0fc6b40f4
+
         </div>
          
         <div class="my-btn btn mx-2">
             <a class="dropdown-item " href="{{route('chiSiamo')}}">Chi siamo</a>
->>>>>>> 06bdcdff80b652cfa62690300ca2b839e9cb5a7a
+
         </div>
         
         <form class="d-flex mx-2" action="{{route('article.search')}}" method="GET">
