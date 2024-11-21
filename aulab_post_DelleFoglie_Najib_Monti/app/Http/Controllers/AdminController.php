@@ -7,8 +7,7 @@ use App\Models\Tag;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Tag;
-use App\Models\Category;
+
 
 
 class AdminController extends Controller
