@@ -1,5 +1,14 @@
 <x-layout>
+
+
+
+  {{-- nuova navbarr  --}}
+  <x-navbar>  
+  </x-navbar>
+
+  
     <div class="container-fluid bgc-yellow">
+      
         <div class="row justify-content-center">
 
             @if (session('message'))
@@ -13,6 +22,8 @@
                   {{session('alert')}}
                 </div>
             @endif
+
+
             
             <div class="row wrap align-items-center">
 

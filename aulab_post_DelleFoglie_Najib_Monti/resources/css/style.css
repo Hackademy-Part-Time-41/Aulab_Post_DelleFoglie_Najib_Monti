@@ -12,6 +12,7 @@
     --quinary-color: #fdba74;
     --senary-color: #c4b5fd;
     --septenary-color: #93c5fd;
+
 }
 
 *{
@@ -23,6 +24,9 @@
     font-size: medium;
     /* font-size: 1.2rem; */
     font-optical-sizing: auto;
+}
+*::before, *::after{
+    box-sizing: border-box;
 }
 
 
@@ -165,4 +169,87 @@
 }
 footer.col-4 {
     padding: 0 15px; /* Rimuove i margini laterali per una spaziatura più compatta */
+}
+
+.hamburger-menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hamburger-menu a{
+    height: 100%;
+    padding:0 20px;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+
+.hamburger-menu .home-link{
+    margin-right: auto;
+}
+.hamburger-menu svg{
+    fill: #ff7f50;
+}
+#sidebar-active{
+    display: none;
+}
+.open-side-button, .close-side-button{
+    display: none;
+    color: var(--quinary-color);
+    padding: 20px;
+}
+
+@media(max-width:979px){
+    .links-container{
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0px;
+        right: -100%;
+        z-index: 10px;
+        width: 250px;
+        background-color: var(--quinary-color);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+    }
+
+    .hamburger-menu a{
+        box-sizing: border-box;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .open-side-button, .close-side-button{
+        display: block;
+    }
+    .hamburger-menu svg{
+        fill: #ff7f50;
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0px;
+    }
+    #sidebar-active:checked ~ .hamburger-menu svg{
+        fill: var(--primary-color);
+    }
+
+    /* #sidebar-active:checked ~ #overlay{
+        background: red;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    } */
+
 }
