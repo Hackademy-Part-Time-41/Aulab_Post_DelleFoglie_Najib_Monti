@@ -65,6 +65,7 @@ class ArticleController extends Controller implements HasMiddleware
         ]);
 
         $tags = explode(',', $request->tags);
+        
         foreach ($tags as $i=>$tag) {
             $tags[$i] = trim($tag);  
         }

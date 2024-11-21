@@ -53,7 +53,7 @@
                             @enderror
                         </div>
 
-                        <div class="mt-3">
+                        <div class="mb-3">
                             <label for="tags" class="form-label">Tag</label>
                             <input class="form-control @error('tags') is-invalid @enderror" type="text" name="tags" id="tags" value="{{old('tags')}}">
                             @error('tags')
