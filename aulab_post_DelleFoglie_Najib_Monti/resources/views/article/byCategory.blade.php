@@ -17,6 +17,13 @@
                             <h5 class="card-title" >{{$article->title}}</h5>
                             <p class="card-subtitle">{{$article->subtitle}}</p>
                             <p class="small text-muted my-0">
+                                @if ($article->category)
+                                    <p class="small text-muted">
+                                        <a href="{{ route('article.byCategory', $article->category)}}" class="text-capitalize text-muted">{{$article->category->name}}</a>
+                                    </p>
+                                @else
+                                    <p class="small text-muted">Nessuna Categoria</p>
+                                @endif
                                 @foreach ($article->tags as $tag)
                                     #{{$tag->name}}
                                 @endforeach
