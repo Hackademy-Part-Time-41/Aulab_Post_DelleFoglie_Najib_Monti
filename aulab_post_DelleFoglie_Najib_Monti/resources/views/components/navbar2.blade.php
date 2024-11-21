@@ -2,14 +2,12 @@
     <div class="container-nav sfondo">
 
         <div class="mx-2">
-
             <a class="navbar-brand bg-dark text-dark" href="{{route('homepage')}}"><img class="logo container-xs" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="p"></a>
 
         </div>
          
         <div class="my-btn btn mx-2">
             <a class="dropdown-item " href="{{route('chiSiamo')}}">Chi siamo</a>
-
         </div>
         
         <form class="d-flex mx-2" action="{{route('article.search')}}" method="GET">
@@ -71,10 +69,11 @@
                     Benvenuto Ospite 
                 </a>
                 <ul class="dropdown-menu">
-                    <li>
+                    {{-- <li>
                         <a class="dropdown-item" href="{{ route('article.index') }}">Tutti Gli Articoli</a>
-                    </li>
-                    <li><a href="{{ route('careers') }}" class="nav-link active" aria-current="page">Lavora con noi</a></li>
+                    </li> --}}
+                    {{-- Aggiustato menu a tendina --}}
+                    <li><a href="{{ route('careers') }}" class="dropdown-item" aria-current="page">Lavora con noi</a></li>
                     <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                     <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                 </ul>

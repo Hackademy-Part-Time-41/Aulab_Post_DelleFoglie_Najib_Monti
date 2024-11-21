@@ -28,4 +28,5 @@ class AppServiceProvider extends ServiceProvider
             View::share(["categories"=>$categories]);
         };
     }
+
 }

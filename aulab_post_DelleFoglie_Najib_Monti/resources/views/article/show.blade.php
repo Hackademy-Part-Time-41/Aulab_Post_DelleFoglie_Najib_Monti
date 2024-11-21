@@ -15,6 +15,18 @@
                     <p class="fs-5">Categoria:
                         <a href="{{route('article.byCategory', $article->category)}}" class="text-capitalize text-muted fw-bold">{{$article->category->name}}</a>
                     </p>
+                    @if ($article->category)
+                        <p class="small text-muted">
+                            <a href="{{ route('article.byCategory', $article->category)}}" class="text-capitalize text-muted">{{$article->category->name}}</a>
+                        </p>
+                    @else
+                        <p class="small text-muted">Nessuna Categoria</p>
+                    @endif
+                    <p class="small text-muted my-0">
+                        @foreach ($article->tags as $tag)
+                            #{{$tag->name}}
+                        @endforeach
+                      </p>
                     <div class="text-muted my-3">
                         <p>Redatto il {{$article->created_at->format('d/m/y')}} da 
                             <a href="{{route('article.byUser', $article->user)}}}}">{{$article->user->name}}</a></p>

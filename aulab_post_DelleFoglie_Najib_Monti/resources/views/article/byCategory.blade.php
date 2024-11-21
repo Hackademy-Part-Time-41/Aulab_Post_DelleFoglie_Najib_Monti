@@ -2,7 +2,7 @@
     <div class="container-fluid p-5 bg-secondary-subtitle text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1 text-capitalize">{{$category->name}}</h1>
+                <h1 class="tangerine-regular">{{$category->name}}</h1>
             </div>
         </div>
     </div>
@@ -16,6 +16,11 @@
                         <div class="card-body">
                             <h5 class="card-title" >{{$article->title}}</h5>
                             <p class="card-subtitle">{{$article->subtitle}}</p>
+                            <p class="small text-muted my-0">
+                                @foreach ($article->tags as $tag)
+                                    #{{$tag->name}}
+                                @endforeach
+                              </p>
                             <div class="card-footer d-flex justify-content-between align-items-center">
                                 <p>redatto il {{$article->created_at->format('d/m/y')}} <br>
                                     da {{$article->user->name}}</p>
