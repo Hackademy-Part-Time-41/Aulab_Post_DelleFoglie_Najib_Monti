@@ -1,4 +1,4 @@
-<nav class="d-flex container-nav sfondo justify-content-between">
+{{-- <nav class="d-flex container-nav sfondo justify-content-between">
 
     <div class="">
         <a class="navbar-brand text-dark" href="{{route('homepage')}}"><img class="logo container-xs" src="{{Storage::url('images/Designer_35.jpeg')}}" id="logo" alt="p"></a>
@@ -84,4 +84,4 @@
  
 
     
-</nav>
+</nav> --}}
