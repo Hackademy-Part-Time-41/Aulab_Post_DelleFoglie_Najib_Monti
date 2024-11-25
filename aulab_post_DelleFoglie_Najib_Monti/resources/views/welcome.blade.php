@@ -1,7 +1,5 @@
 <x-layout>
 
-
-
   
     <div class="container-fluid bgc-yellow">
       

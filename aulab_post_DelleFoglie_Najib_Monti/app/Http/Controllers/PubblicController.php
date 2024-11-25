@@ -63,7 +63,7 @@ class PubblicController extends Controller implements HasMiddleware
                 break;
         }
         
-        $user->update();
+        $user->save();
 
         return redirect(route('homepage'))->with('message', 'Richiesta inviata con successo');
     

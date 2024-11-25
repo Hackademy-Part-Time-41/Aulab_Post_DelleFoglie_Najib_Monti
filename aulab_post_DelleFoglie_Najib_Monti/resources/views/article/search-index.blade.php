@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 sfondo text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Tutti gli articoli per {{$query}}</h1>
+                <h1 class="display-1 text-center mb-3 tangerine-regular">Tutti gli articoli per {{$query}}</h1>
             </div>
         </div>
     </div>
@@ -10,7 +10,7 @@
         <div class="row justify-content-evenly">
             <div class="col-12 col-md-3">
                 @foreach ($articles as $article )
-                    <div class="card" style="width: 18rem;">
+                    <div class="card mt-3" style="width: 18rem;">
                         <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="immagine dell'articolo:{{$article->title}}">
 
                         <div class="card-body">

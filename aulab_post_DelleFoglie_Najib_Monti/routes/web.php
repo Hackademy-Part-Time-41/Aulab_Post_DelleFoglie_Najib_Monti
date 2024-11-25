@@ -5,7 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PubblicController;
 use App\Http\Controllers\RevisorController;
-
+use BaconQrCode\Writer;
+use App\Http\Controllers\WriterController;
 
 
 Route::get('/', [PubblicController::class, 'homepage'])->name('homepage');
@@ -47,4 +48,8 @@ Route::middleware('revisor')->group(function() {
 Route::middleware('writer')->group(function() {
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+    Route::get('/writer/dashboard', [WriterController::class, 'Dashboard'])->name('writer.dashboard');
+    Route::get('/writer/edit/{article}', [ArticleController::class, 'edit'])->name('article.edit');
+    Route::put('/article/update/{article}', [ArticleController::class, 'update'])->name('article.update');
+    Route::delete('/article/destroy/{article}', [ArticleController::class, 'destroy'])->name('article.destroy');
 });
