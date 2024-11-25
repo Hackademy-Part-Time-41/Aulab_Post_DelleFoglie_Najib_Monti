@@ -1,11 +1,5 @@
 <x-layout>
 
-
-
-  {{-- nuova navbarr  --}}
-  <x-navbar>  
-  </x-navbar>
-
   
     <div class="container-fluid bgc-yellow">
       

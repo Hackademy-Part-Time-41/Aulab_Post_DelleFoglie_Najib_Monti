@@ -242,6 +242,8 @@ footer.col-4 {
         fill: var(--primary-color);
     }
 
+    
+
     /* #sidebar-active:checked ~ #overlay{
         background: red;
         height: 100%;
