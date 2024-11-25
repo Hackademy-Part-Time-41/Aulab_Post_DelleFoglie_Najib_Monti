@@ -1,9 +1,9 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 sfondo text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class='display-1'>Scrivi il tuo articolo</h1>
+                <h1 class="display-1 text-center mb-3 tangerine-regular">Scrivi il tuo articolo</h1>
             </div>
         </div>
     </div>
@@ -13,7 +13,7 @@
             
             <div class="col-12 col-md-8">
 
-                <form action="{{route('article.store') }}" method="POST" class="card p-5 shadow" enctype="multipart/form-data">
+                <form action="{{route('article.store') }}" method="POST" class="card p-5 shadow corallo-chiaro" enctype="multipart/form-data">
                     @csrf
                     <div class="mt-3 text-center">
                         <div class="my-3">
@@ -72,9 +72,12 @@
                     </div>
 
                     <div class="d-flex justify-content-center mt-3">
-                        <button class='btn btn-dark' type="submit">Pubblica articolo</button>
-                        <a href="{{route('homepage')}}" class="text-secondary mt-2">Torna alla homepage</a>
+                        <button class='btn my-btn' type="submit">Pubblica articolo</button>
                     </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="{{route('homepage')}}" class="text-dark mt-2 ms-2">Torna alla homepage</a>
+                    </div>
+                        
 
                 </form>
             </div>

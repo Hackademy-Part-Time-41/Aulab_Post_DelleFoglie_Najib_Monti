@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtitle text-center">
+    <div class="container-fluid p-5 sfondo text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Bentornato, Redattore {{Auth::user()->name}}</h1> 
+                <h1 class="display-1 text-center mb-3 tangerine-regular">Bentornato, Redattore {{Auth::user()->name}}</h1> 
             </div>
         </div>
     </div>

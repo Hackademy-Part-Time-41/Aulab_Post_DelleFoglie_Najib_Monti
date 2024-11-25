@@ -1,15 +1,15 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 sfondo text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Lavora con noi</h1>
+                <h1 class="display-1 text-center mb-3 tangerine-regular">Lavora con noi</h1>
             </div>
         </div>
     </div>
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-md-6">
-                <form action="{{route('careers.submit')}}" method="POST" class="card p-5 shadow">
+                <form action="{{route('careers.submit')}}" method="POST" class="card p-5 shadow corallo-chiaro">
                     @csrf
                     <div class="mb-3">
                         <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
@@ -56,7 +56,7 @@
                     </div>
                     
                     <div class="mt-3 d-flex justify-content-center">
-                        <button type="submit" class="btn btn-outline-secondary">Invia candidatura</button>
+                        <button type="submit" class="btn my-btn">Invia candidatura</button>
                     </div>
                 </form>
                 

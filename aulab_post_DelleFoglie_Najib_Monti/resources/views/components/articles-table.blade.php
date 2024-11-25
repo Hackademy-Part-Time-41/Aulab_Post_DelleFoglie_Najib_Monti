@@ -1,4 +1,3 @@
-<x-layout>
 <table class="table table-striped table-hover sfondo">
     <thead class="table-dark">
       <tr>
@@ -30,4 +29,3 @@
       @endforeach
     </tbody>
 </table>
-</x-layout>
