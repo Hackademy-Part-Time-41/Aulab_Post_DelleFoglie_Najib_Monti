@@ -58,8 +58,12 @@
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
                 </form>
-                </ul>
-          
+                    @if (Auth::user()->is_writer)
+                        <li class="d-flex justify-content-center">
+                            <a class="my-dropdown-item" href="{{route('writer.dashboard')}}">Dashboard Writer</a>
+                        </li>
+                    @endif    
+                </ul> 
             </div>
             @endauth
 
@@ -69,9 +73,9 @@
                     Benvenuto Ospite 
                 </a>
                 <ul class="dropdown-menu">
-                    {{-- <li>
+                    <li>
                         <a class="dropdown-item" href="{{ route('article.index') }}">Tutti Gli Articoli</a>
-                    </li> --}}
+                    </li> 
                     {{-- Aggiustato menu a tendina --}}
                     <li><a href="{{ route('careers') }}" class="dropdown-item" aria-current="page">Lavora con noi</a></li>
                     <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
