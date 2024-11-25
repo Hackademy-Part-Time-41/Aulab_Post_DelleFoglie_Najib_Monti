@@ -2,10 +2,6 @@
 
 
 
-  {{-- nuova navbarr  --}}
-  <x-navbar>  
-  </x-navbar>
-
   
     <div class="container-fluid bgc-yellow">
       
@@ -31,11 +27,11 @@
                 <img class="img-fluid" src="{{Storage::url('images/Designer_35.jpeg')}}" alt="">
               </div>
 
-              <div class="row justify-content-around col-12 col-md-9 col-xl-8 col-xxl-6">
+              <div class="row justify-content-around col-12 col-md-9 col-xl-6 col-xxl-6">
 
-                <div class="col-12 col-xl-4 mt-3">
+                <div class="col-10 mt-3">
                     <div class="shadow corallo-chiaro">
-                        <h1 class="text-center mb-3 fw-bolder fs-1 tangerine-regular">Benvenuto nella nostra community</h1>
+                        <h1 class="text-center mb-3 display-3 tangerine-regular">Benvenuto nella nostra community</h1>
                      </div>
                      <div class="text-center">
                       {{-- modificata struttura del div del testo di benvenuto nella community --}}

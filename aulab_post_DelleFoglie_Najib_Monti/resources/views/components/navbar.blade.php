@@ -37,6 +37,7 @@
             <div class="my-btn btn mx-2">
                 <a class="dropdown-item ">Presentati</a>
             </div>
+            
             @auth
             @if (Auth::user()->is_admin)
 
