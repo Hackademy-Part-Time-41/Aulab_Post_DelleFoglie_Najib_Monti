@@ -6,14 +6,15 @@
             </div>
         </div>
     </div>
-    @if (session('message'))
-        <div class="alert alert-success">
-            {{session('message')}}
-        </div>    
-    @endif
+
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
+                @if (session('message'))
+                    <div class="alert alert-success">
+                        {{session('message')}}
+                    </div>    
+                @endif
                 <h2>Articoli da revisionare</h2>
                 <x-articles-table :articles="$unrevisionedArticles"/> 
             </div>

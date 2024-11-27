@@ -1,5 +1,8 @@
 
-      <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="immagine dell'articolo:{{$article->title}}">
+      <div class="img-my">
+        <img src="{{Storage::url($article->image)}}" class="card-img-top img-my" alt="immagine dell'articolo:{{$article->title}}">
+      </div>
+      
       <div class="card-body">
         <h5 class="card-title overflow-hidden ">{{$article->title}}</h5>
         <p class="card-subtitle overflow-hidden mt-1">{{$article->subtitle}}</p>
@@ -26,6 +29,7 @@
           <p>redatto il {{$article->created_at->format('d/m/y')}} <br>
               da <a href="{{ route('article.byUser', $article->user)}}" class="text-muted">{{$article->user->name}}</a></p>
       </div>
+      
       <div class="d-flex justify-content-center">
         <a href="{{ route('article.show', $article)}}" class="my-btn card-button btn">Leggi</a>
       </div>
