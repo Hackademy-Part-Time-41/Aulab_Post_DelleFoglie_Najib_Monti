@@ -14,18 +14,18 @@
                         <div class="mb-3 d-flex justify-content-center align-items-center">
                             <label for="email" class="form-label me-3 w-25">Email</label>
                             <input type="email" class="form-control w-50" id="email" name="email" value="{{ old('email') }}">
-                            @error('email')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
                         </div>
+                        @error('email')
+                                <span class="text-danger">{{ $message }}</span>
+                        @enderror
                         <!-- Password -->
                         <div class="mb-3 d-flex justify-content-center align-items-center">
                             <label for="password" class="form-label me-3 w-25">Password</label>
                             <input type="password" class="form-control w-50" id="password" name="password">
-                            @error('password')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
                         </div>
+                        @error('password')
+                                <span class="text-danger">{{ $message }}</span>
+                        @enderror
                         <!-- Bottone Accedi -->
                         <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
                             <button type="submit" class="btn btn-outline-secondary my-btn">Accedi</button>
