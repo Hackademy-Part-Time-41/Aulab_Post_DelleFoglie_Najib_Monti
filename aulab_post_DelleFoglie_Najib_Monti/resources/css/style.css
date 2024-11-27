@@ -10,8 +10,14 @@
     --tertiary-color: lightsteelblue;
     --error-color: #fb7185;
     --quinary-color: #fdba74;
-    --senary-color: #c4b5fd;
-    --septenary-color: #93c5fd;
+
+
+    --politica: #ffd95b;
+    --economia: #40ff15;
+    --tech:#0800ff;
+    --food-drink: #f118f4;
+    --intrattenimento: #00dffc;
+    --sport:#ff0000;
 
 }
 
@@ -171,6 +177,10 @@ footer.col-4 {
     padding: 0 15px; /* Rimuove i margini laterali per una spaziatura più compatta */
 }
 
+.card-button{
+    background-color: var(--quinary-color);
+}
+
 .hamburger-menu{
     display: flex;
     justify-content: flex-end;
@@ -192,7 +202,6 @@ footer.col-4 {
     color: #000;
 }
 
-
 .hamburger-menu .home-link{
     margin-right: auto;
 }
@@ -206,6 +215,45 @@ footer.col-4 {
     display: none;
     color: var(--quinary-color);
     padding: 20px;
+}
+
+.bgc-politica{
+    border: 2px solid var(--politica);
+    -webkit-box-shadow: 0px -0px 31px 0px rgba(255, 217, 91, 1);
+-moz-box-shadow: 0px -0px 31px 0px rgba(255, 217, 91, 1);
+box-shadow: 0px -0px 31px 0px rgba(255, 217, 91, 1);
+}
+.bgc-economia{
+    border: 2px solid var(--economia);
+    -webkit-box-shadow: 0px -0px 31px 0px rgba(64, 255, 21, 1);
+-moz-box-shadow: 0px -0px 31px 0px rgba(64, 255, 21, 1);
+box-shadow: 0px -0px 31px 0px rgba(64, 255, 21, 1);
+
+}
+.bgc-tech{
+    border: 2px solid var(--tech);
+    -webkit-box-shadow: 0px -0px 31px 0px rgba(8, 0, 255, 1);
+    -moz-box-shadow: 0px -0px 31px 0px rgba(8, 0, 255, 1);
+box-shadow: 0px -0px 31px 0px rgba(8, 0, 255, 1);
+}
+.bgc-food-drink{
+    border: 2px solid var(--food-drink);
+    -webkit-box-shadow: 0px -0px 31px 0px rgba(241, 24, 244, 1);
+    -moz-box-shadow: 0px -0px 31px 0px rgba(241, 24, 244, 1);
+box-shadow: 0px -0px 31px 0px rgba(241, 24, 244, 1);
+}
+.bgc-intrattenimento{
+    border: 2px solid var(--intrattenimento);
+    -webkit-box-shadow: 0px -0px 31px 0px rgba(0, 223, 252, 1);
+    -moz-box-shadow: 0px -0px 31px 0px rgba(0, 223, 252, 1);
+box-shadow: 0px -0px 31px 0px rgba(0, 223, 252, 1);
+}
+.bgc-sport{
+    border: 2px solid var(--sport);
+    -webkit-box-shadow: 0px -0px 31px 1px rgba(255, 0, 0, 1);
+    -moz-box-shadow: 0px -0px 31px 1px rgba(255, 0, 0, 1);
+box-shadow: 0px -0px 31px 1px rgba(255, 0, 0, 1);
+
 }
 
 @media(max-width:979px){
@@ -255,3 +303,4 @@ footer.col-4 {
     } */
 
 }
+

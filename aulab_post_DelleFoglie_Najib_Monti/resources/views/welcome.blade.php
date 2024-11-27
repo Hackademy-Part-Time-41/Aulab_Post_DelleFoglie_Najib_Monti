@@ -39,7 +39,7 @@
            </div>
            <div class="col-12 row justify-content-around ">
             @foreach ($categories as $category)
-              <div class="postIt corallo-chiaro col-10 col-md-3 col-lg-3 mt-3">
+              <div class="postIt corallo-chiaro {{$category->colors}} col-10 col-md-3 col-lg-3 mt-3">
                 <div class=""  style="min-width: 8rem">
                   {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top mt-2" alt="articolo:{{$article->title}}"> --}}
                     <img src="https://picsum.photos/400/400" class="card-img-top mt-2" alt="categoria:{{$category->name}}">
@@ -52,16 +52,6 @@
                 </div>
               </div>
             @endforeach
-
-            <div class="container my-5">
-              <div class="row justify-content-center">
-                @foreach ($articles as $article )
-                    <div class="col-12 col-md-3">
-                        <x-card2 :article="$article"/>
-                    </div>
-                @endforeach
-              </div>
-            </div>
             
         </div>
           </div>

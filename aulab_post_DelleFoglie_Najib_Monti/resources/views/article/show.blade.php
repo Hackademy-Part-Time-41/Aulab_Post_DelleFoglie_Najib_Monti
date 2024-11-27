@@ -40,11 +40,11 @@
                             <div class="col-12 d-flex justify-content-evenly">
                                 <form action="{{route('revisor.acceptArticle', $article)}}" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn btn-success">Accetta l'articolo</button>
+                                    <button type="submit" class="btn btn-warning">Rimanda in revisione</button>
                                 </form>
                                 <form action="{{route('revisor.rejectArticle', $article)}}" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn btn-danger">Rifiuta l'articolo</button">
+                                    <button type="submit" class="btn btn-danger">Cancella l'articolo</button">
                                 </form>
                             </div>
                         </div>

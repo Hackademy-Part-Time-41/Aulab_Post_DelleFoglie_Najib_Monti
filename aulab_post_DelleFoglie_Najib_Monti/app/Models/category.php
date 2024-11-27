@@ -10,7 +10,7 @@ class category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'colors'];
 
     public function articles() {
         return $this->hasMany(Article::class);

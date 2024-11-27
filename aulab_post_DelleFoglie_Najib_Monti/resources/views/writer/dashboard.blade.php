@@ -30,9 +30,14 @@
             </div>
         </div>
     </div>
+
+    <div class="d-flex justify-content-center">
         @if (session('message'))
             <div class="alert alert-success">
                 {{session('message')}}
             </div>    
         @endif
+    </div>
+
+
 </x-layout>
