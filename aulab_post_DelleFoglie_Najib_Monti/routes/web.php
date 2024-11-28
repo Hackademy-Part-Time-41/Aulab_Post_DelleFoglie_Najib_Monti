@@ -1,12 +1,12 @@
 <?php
 
+use BaconQrCode\Writer;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PubblicController;
 use App\Http\Controllers\RevisorController;
-use BaconQrCode\Writer;
-use App\Http\Controllers\WriterController;
 
 
 Route::get('/', [PubblicController::class, 'homepage'])->name('homepage');

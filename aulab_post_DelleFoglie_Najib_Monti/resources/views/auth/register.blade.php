@@ -14,28 +14,28 @@
                         <div class="mb-3 d-flex justify-content-center align-items-center">
                             <label for="name" class="form-label me-3 text-center w-25">Nome Utente</label>
                             <input type="text" id="name" name="name" value="{{ old('name') }}" class="form-control w-50">
-                            @error('name')
-                                <span class="text-danger"> {{$message}}</span>
-                            @enderror
                         </div>
+                        @error('name')
+                                <span class="text-danger"> {{$message}}</span>
+                        @enderror
 
                         <!-- Email -->
                         <div class="mb-3 d-flex justify-content-center align-items-center">
                             <label for="email" class="form-label me-3 text-center w-25">E-mail</label>
                             <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control w-50">
-                            @error('email')
-                                <span class="text-danger"> {{ $message }}</span>
-                            @enderror
                         </div>
+                        @error('email')
+                                <span class="text-danger"> {{ $message }}</span>
+                        @enderror
 
                         <!-- Password -->
                         <div class="mb-3 d-flex justify-content-center align-items-center">
                             <label for="password" class="form-label me-3 text-center w-25">Password</label>
                             <input type="password" id="password" name="password" class="form-control w-50">
-                            @error('password')
-                                <span class="text-danger"> {{ $message }}</span>
-                            @enderror
                         </div>
+                        @error('password')
+                                <span class="text-danger"> {{ $message }}</span>
+                        @enderror
 
                         <!-- Conferma Password -->
                         <div class="mb-3 d-flex justify-content-center align-items-center">
