@@ -181,6 +181,14 @@ footer.col-4 {
     background-color: var(--quinary-color);
 }
 
+.imgResponsive {
+    width: 100%;               /* Immagine prende il 100% della larghezza del contenitore */
+    height: auto;              /* L'altezza viene calcolata automaticamente per mantenere il rapporto di aspetto */
+    object-fit: cover;         /* L'immagine riempie il contenitore, ma senza distorsioni */
+    max-width: 100%;           /* Impedisce che l'immagine si allarghi oltre la larghezza del contenitore */
+  }
+  
+
 .hamburger-menu{
     display: flex;
     justify-content: flex-end;
@@ -303,4 +311,7 @@ box-shadow: 0px -0px 31px 1px rgba(255, 0, 0, 1);
     } */
 
 }
+
+
+
 

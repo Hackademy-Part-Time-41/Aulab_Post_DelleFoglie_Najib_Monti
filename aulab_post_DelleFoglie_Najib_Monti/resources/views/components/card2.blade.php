@@ -1,5 +1,7 @@
 
-      <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="immagine dell'articolo:{{$article->title}}">
+      <div class="imgResponsive">
+        <img src="{{Storage::url($article->image)}}" class="card-img-top imgResponsive" alt="immagine dell'articolo:{{$article->title}}">
+      </div>
       <div class="card-body">
         <h5 class="card-title overflow-hidden ">{{$article->title}}</h5>
         <p class="card-subtitle overflow-hidden mt-1">{{$article->subtitle}}</p>
