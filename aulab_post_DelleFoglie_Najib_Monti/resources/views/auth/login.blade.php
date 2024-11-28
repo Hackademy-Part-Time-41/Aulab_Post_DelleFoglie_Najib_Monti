@@ -16,7 +16,9 @@
                             <input type="email" class="form-control w-50" id="email" name="email" value="{{ old('email') }}">
                         </div>
                         @error('email')
-                                <span class="text-danger">{{ $message }}</span>
+                        <div class="d-flex justify-content-center">
+                            <div class="alert alert-danger w-50">{{$message}}</div>
+                        </div>
                         @enderror
                         <!-- Password -->
                         <div class="mb-3 d-flex justify-content-center align-items-center">
@@ -24,7 +26,10 @@
                             <input type="password" class="form-control w-50" id="password" name="password">
                         </div>
                         @error('password')
-                                <span class="text-danger">{{ $message }}</span>
+                            <div class="d-flex justify-content-center">
+                                <div class="alert alert-danger w-50">{{$message}}</div>
+                            </div>
+                            
                         @enderror
                         <!-- Bottone Accedi -->
                         <div class="mb-3 d-flex justify-content-center flex-column align-items-center">

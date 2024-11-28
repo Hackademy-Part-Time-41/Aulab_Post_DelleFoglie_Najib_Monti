@@ -32,8 +32,8 @@
                            
                             
                         </select>
-                        @error ('role')
-                            <span class="text-danger"> {{ $message }}</span>
+                        @error('role')
+                            <div class="alert alert-danger">{{$message}}</div>
                         @enderror
                     </div>
 
@@ -42,7 +42,7 @@
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email" value="{{Auth::user()->email}}" readonly>
                         @error('email')
-                            <span class="text-danger"> {{ $message }}</span>
+                            <div class="alert alert-danger">{{$message}}</div>
                         @enderror
 
                     </div>
@@ -51,7 +51,7 @@
                         <label for="message" class="form-label">Perche ti stai candidando? Raccontacelo</label>
                         <textarea class="form-control" id="message" name="message" rows="7" cols="30">{{ old('message')}}</textarea>
                         @error('message')
-                            <span class="text-danger"> {{ $message }}</span>
+                            <div class="alert alert-danger">{{$message}}</div>
                         @enderror
                     </div>
                     

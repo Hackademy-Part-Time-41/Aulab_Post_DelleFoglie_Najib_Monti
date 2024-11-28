@@ -3,7 +3,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Titolo</th>
-        <th scope="col">Sottotitolo</th>
+        <th scope="col" class="d-none d-md-table-cell">Sottotitolo</th>
         <th scope="col">Redattore</th>
         <th scope="col">Azioni</th>
       </tr>
@@ -13,7 +13,7 @@
         <tr>
           <th scope="row">{{$article->id}}</th>
           <td>{{$article->title}}</td>
-          <td>{{$article->subtitle}}</td>
+          <td class="d-none d-md-table-cell">{{$article->subtitle}}</td>
           <td>{{$article->user->name}}</td>
           <td>
             @if (is_null($article->is_accepted))
