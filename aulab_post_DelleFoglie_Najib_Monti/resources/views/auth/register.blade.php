@@ -16,7 +16,9 @@
                             <input type="text" id="name" name="name" value="{{ old('name') }}" class="form-control w-50">
                         </div>
                         @error('name')
-                                <span class="text-danger"> {{$message}}</span>
+                            <div class="d-flex justify-content-center">
+                                <div class="alert alert-danger w-50">{{$message}}</div>
+                            </div>
                         @enderror
 
                         <!-- Email -->
@@ -25,7 +27,9 @@
                             <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control w-50">
                         </div>
                         @error('email')
-                                <span class="text-danger"> {{ $message }}</span>
+                            <div class="d-flex justify-content-center">
+                                <div class="alert alert-danger w-50">{{$message}}</div>
+                            </div>
                         @enderror
 
                         <!-- Password -->
@@ -34,14 +38,20 @@
                             <input type="password" id="password" name="password" class="form-control w-50">
                         </div>
                         @error('password')
-                                <span class="text-danger"> {{ $message }}</span>
+                            <div class="d-flex justify-content-center">
+                                <div class="alert alert-danger w-50">{{$message}}</div>
+                            </div>
                         @enderror
-
                         <!-- Conferma Password -->
                         <div class="mb-3 d-flex justify-content-center align-items-center">
                             <label for="password_confirmation" class="form-label me-3 text-center w-25">Conferma Password</label>
                             <input type="password" id="password_confirmation" name="password_confirmation" class="form-control w-50">
                         </div>
+                        @error('password confirmation')
+                            <div class="d-flex justify-content-center">
+                                <div class="alert alert-danger w-50">{{$message}}</div>
+                            </div>
+                        @enderror
 
                         <!-- Bottone Registrati -->
                         <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
