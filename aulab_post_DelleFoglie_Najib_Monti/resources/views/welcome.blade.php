@@ -33,18 +33,22 @@
                      </div>
                      <div class="text-center">
                       {{-- modificata struttura del div del testo di benvenuto nella community --}}
-                        <p class="dancing-script fs-5">Ciao nuovo utente e benvenuto su Il Post-it, la tua fonte inesauribile di notizie, dalla politica all'intrattenimento, fino ad arrivare a musica e contenuti hi-tech. Qui potrai sbizzarrirti nel cercare succosi gossip e semplici informazioni, e perchè no magari anche tu potresti essere il nostro prossimo scrittore. Quindi che aspetti? Pubblica un Post-it</p>
+                        <p class="dancing-script fs-5">
+                          Siamo felici di averti con noi! Qui troverai una fonte inesauribile di notizie, dalle ultime in politica all'intrattenimento, passando per musica, gossip e tecnologie all'avanguardia.
+                          Esplora liberamente i contenuti, scopri storie interessanti e, perché no, magari un giorno sarai tu a scrivere per noi!
+                          Quindi, cosa aspetti? Pubblica il tuo primo Post-it e unisciti alla nostra community!
+                        </p>
                      </div>
                 </div>
            </div>
            <div class="col-12 row justify-content-around ">
             @foreach ($categories as $category)
               <div class="postIt corallo-chiaro {{$category->colors}} col-10 col-md-3 col-lg-3 mt-3">
-                <div class=""  style="min-width: 8rem">
+                <div style="min-width: 8rem" >
                   {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top mt-2" alt="articolo:{{$article->title}}"> --}}
-                    <img src="https://picsum.photos/400/400" class="card-img-top mt-2" alt="categoria:{{$category->name}}">
+                    <img src="{{Storage::url('images/sticky-note.jpg')}}" class="card-img-top mt-2" alt="categoria:{{$category->name}}">
                   
-                    <div class="">
+                    <div>
                       <p class="text-center">
                         <a href="{{ route('article.byCategory', $category->id)}}" class="postIt-text fs-1 fw-bolder ">{{$category->name}}</a>
                       </p>

@@ -1,5 +1,5 @@
 
-      <div class="d-flex justify-content-center mt-2">
+      <div class="d-flex justify-content-center mt-3">
         <img src="{{Storage::url($article->image)}}" class="img-fluid my-img-card" alt="immagine dell'articolo:{{$article->title}}">
       </div>
       

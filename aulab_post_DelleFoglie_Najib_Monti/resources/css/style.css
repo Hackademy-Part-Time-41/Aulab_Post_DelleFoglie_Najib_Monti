@@ -72,6 +72,12 @@
     object-position: center;
 }
 
+.my-img-card1 {
+    border-radius: 8px; /* Angoli arrotondati */
+    object-fit: cover; /* Adatta l'immagine alle dimensioni della card */
+    max-height: 200px; /* Imposta un'altezza massima per l'immagine */
+}
+
 
 .container-nav{
     display: flex;
@@ -170,6 +176,17 @@
     height: 20%;
     object-fit: hidden; /* L'immagine coprirà il contenitore, ritagliandosi se necessario */
 }
+
+.shadow-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra di base */
+}
+
+
+/* .shadow-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); 
+} */
 
 .social-icon {
     width: 30px; /* Dimensione piccola per le immagini dei social */
